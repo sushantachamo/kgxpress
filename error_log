@@ -1,0 +1,21 @@
+[17-Jan-2021 11:11:05 Asia/Kathmandu] PHP Fatal error:  Uncaught ErrorException: file_put_contents(C:\Users\dell\Desktop\kgxpress\storage\framework\views/f772edbba5631a55823939d10349fc423b181763.php): failed to open stream: No such file or directory in /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:133
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home/techntxw/...', 133, Array)
+#1 /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(133): file_put_contents('C:\\Users\\dell\\D...', '<?php $__env->s...', 0)
+#2 /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(129): Illuminate\Filesystem\Filesystem->put('C:\\Users\\dell\\D...', '<?php $__env->s...')
+#3 /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\View\Compilers\BladeCompiler->compile('/home/techntxw/...')
+#4 /home/techntxw/kgxpress in /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 133
+[17-Jan-2021 11:11:29 Asia/Kathmandu] PHP Fatal error:  Uncaught ErrorException: file_put_contents(C:\Users\dell\Desktop\kgxpress\storage\framework\views/f772edbba5631a55823939d10349fc423b181763.php): failed to open stream: No such file or directory in /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:133
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home/techntxw/...', 133, Array)
+#1 /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(133): file_put_contents('C:\\Users\\dell\\D...', '<?php $__env->s...', 0)
+#2 /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(129): Illuminate\Filesystem\Filesystem->put('C:\\Users\\dell\\D...', '<?php $__env->s...')
+#3 /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\View\Compilers\BladeCompiler->compile('/home/techntxw/...')
+#4 /home/techntxw/kgxpress in /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 133
+[17-Jan-2021 11:13:22 Asia/Kathmandu] PHP Fatal error:  Uncaught ErrorException: file_put_contents(C:\Users\dell\Desktop\kgxpress\storage\framework\views/f772edbba5631a55823939d10349fc423b181763.php): failed to open stream: No such file or directory in /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:133
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/home/techntxw/...', 133, Array)
+#1 /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(133): file_put_contents('C:\\Users\\dell\\D...', '<?php $__env->s...', 0)
+#2 /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(129): Illuminate\Filesystem\Filesystem->put('C:\\Users\\dell\\D...', '<?php $__env->s...')
+#3 /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(51): Illuminate\View\Compilers\BladeCompiler->compile('/home/techntxw/...')
+#4 /home/techntxw/kgxpress in /home/techntxw/kgxpress.com/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 133

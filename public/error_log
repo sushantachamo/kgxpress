@@ -1,0 +1,1 @@
+[20-Jun-2021 08:10:39 Asia/Kathmandu] PHP Fatal error:  Cannot use try without catch or finally in /home/techntxw/kgxpress.com/app/Http/Controllers/Auth/RegisterController.php on line 145
