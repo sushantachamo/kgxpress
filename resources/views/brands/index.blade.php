@@ -40,7 +40,12 @@
                     <tr>
                         <td>{{ ($key+1) + ($brands->currentPage() - 1)*$brands->perPage() }}</td>
                         <td>{{$brand->name}}</td>
-                        <td><img loading="lazy"  class="img-md" src="{{ my_asset($brand->logo) }}" alt="Logo"></td>
+                        
+                        <td>
+                            @if (!empty($brand->logo))
+                                <img loading="lazy"  class="img-md" src="{{ my_asset($brand->logo) }}" alt="Logo">
+                            @endif
+                        </td>
                         <td>
                             <div class="btn-group dropdown">
                                 <button class="btn btn-primary dropdown-toggle dropdown-toggle-icon" data-toggle="dropdown" type="button">

@@ -699,9 +699,9 @@ class ProductController extends Controller
                 
             }
             $delete_meta = $product->meta_img;
-            if($delete_meta != NULL) {
-                unlink($delete_meta);
-            }
+            // if($delete_meta != NULL) {
+            //     unlink($delete_meta);
+            // }
             foreach (Language::all() as $key => $language) {
                 $data = openJSONFile($language->code);
                 unset($data[$product->name]);

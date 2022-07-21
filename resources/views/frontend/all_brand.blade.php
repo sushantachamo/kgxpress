@@ -10,7 +10,11 @@
                     @foreach (\App\Brand::all() as $brand)
                         <div class="col-xxl-2 col-lg-4 col-sm-6 text-center">
                             <a href="{{ route('products.brand', $brand->slug) }}" class="d-block p-3 mb-3 border rounded">
-                                <img src="{{ asset($brand->logo) }}" class="lazyload img-fit" height="50" alt="{{  translate($brand->name) }}">
+                                @if (!empty($brand->logo))
+                                    <img src="{{ asset($brand->logo) }}" class="lazyload img-fit" height="50" alt="{{  translate($brand->name) }}">
+                                @else
+                                    <img src="{{ asset("default.png") }}" class="lazyload img-fit" height="50" alt="{{  translate($brand->name) }}">
+                                @endif
                             </a>
                         </div>
                     @endforeach

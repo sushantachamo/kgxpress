@@ -81,7 +81,12 @@
                         <td>
                             <a href="{{ route('product', $product->slug) }}" target="_blank" class="media-block">
                                 <div class="media-left">
-                                    <img loading="lazy"  class="img-md" src="{{ my_asset($product->thumbnail_img)}}" alt="Image">
+                                    @if (!empty($product->thumbnail_img))
+                                        <img loading="lazy"  class="img-md" src="{{ my_asset($product->thumbnail_img)}}" alt="Image">
+                                    @else
+                                        <img loading="lazy"  class="img-md" src="{{ my_asset('default.png')}}" alt="Image">
+                                    @endif
+                                    
                                 </div>
                                 <div class="media-body">{{ __($product->name) }}</div>
                             </a>

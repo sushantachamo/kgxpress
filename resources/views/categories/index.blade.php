@@ -44,7 +44,12 @@
                         <td>{{ ($key+1) + ($categories->currentPage() - 1)*$categories->perPage() }}</td>
                         <td>{{__($category->name)}}</td>
                         <td><img loading="lazy"  class="img-md" src="{{ my_asset($category->banner) }}" alt="{{translate('banner')}}"></td>
-                        <td><img loading="lazy"  class="img-xs" src="{{ my_asset($category->icon) }}" alt="{{translate('icon')}}"></td>
+                        <td>
+                            @if (!empty($category->icon))
+                                <img loading="lazy"  class="img-xs" src="{{ my_asset($category->icon) }}" alt="{{translate('icon')}}">
+                            @endif
+                            
+                        </td>
                         <td><label class="switch">
                             <input onchange="update_featured(this)" value="{{ $category->id }}" type="checkbox" <?php if($category->featured == 1) echo "checked";?> >
                             <span class="slider round"></span></label></td>

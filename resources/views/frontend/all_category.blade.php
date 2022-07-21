@@ -14,7 +14,12 @@
                                     <li class="@php if($i == 0) echo 'active' @endphp">
                                         <a href="#{{ $i }}" class="row no-gutters align-items-center">
                                             <div class="col-md-3">
-                                                <img loading="lazy"  class="cat-image" src="{{ asset($categories[$i]->icon) }}">
+                                                @if (!empty($categories[$i]->icon)))
+                                                    <img loading="lazy"  class="cat-image" src="{{ asset($categories[$i]->icon) }}">
+                                                @else
+                                                    <img loading="lazy"  class="cat-image" src="{{ asset("default.png") }}">
+                                                @endif
+                                                
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="cat-name">{{ $categories[$i]->name }}</div>
@@ -37,7 +42,12 @@
                                     <li class="@php if($key == 0) echo 'active' @endphp">
                                         <a href="#{{ $key }}" class="row no-gutters align-items-center">
                                             <div class="col-md-3">
-                                                <img loading="lazy"  class="cat-image" src="{{ asset($category->icon) }}">
+                                                @if (!empty($category->icon))
+                                                    <img loading="lazy"  class="cat-image" src="{{ asset($category->icon) }}">
+                                                @else
+                                                    <img loading="lazy"  class="cat-image" src="{{ asset("default.png") }}">
+                                                @endif
+                                                
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="cat-name">{{  __($category->name) }}</div>
