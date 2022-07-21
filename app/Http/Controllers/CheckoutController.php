@@ -329,8 +329,8 @@ class CheckoutController extends Controller
             $orders = Order::orderBy('id','DESC')->first();
             // dd($orders->code);
 
-            $pfxCertPrivado = $_SERVER['DOCUMENT_ROOT']."/public/certificate/CREDITOR.pfx";     /* Server */
-            // $pfxCertPrivado = public_path("certificate/CREDITOR.pfx");     /* localhost */
+            //$pfxCertPrivado = $_SERVER['DOCUMENT_ROOT']."/public/certificate/CREDITOR.pfx";     /* Server */
+            $pfxCertPrivado = public_path("certificate/CREDITOR.pfx");     /* localhost */
             $cert_password  = env('NCHL_CERTIFICATE_PASSWORD');
             if (!is_file($pfxCertPrivado)) {
                 dd("Certificate not found !!" . $pfxCertPrivado);

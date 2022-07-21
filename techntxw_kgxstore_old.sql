@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2022 at 07:38 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Jan 17, 2021 at 05:21 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -63,9 +63,7 @@ CREATE TABLE `addresses` (
 
 INSERT INTO `addresses` (`id`, `user_id`, `address`, `country`, `city`, `postal_code`, `phone`, `set_default`, `created_at`, `updated_at`) VALUES
 (1, 11, 'PCPS College, Nepal Kandevta Sthan, Kupondole', 'Nepal', 'Kathmandu', '46600', '+9779841209394', 0, '2020-11-30 22:22:53', '2020-11-30 22:22:53'),
-(2, 9, 'new road', 'Nepal', 'kathmandu', '977', '7410852', 0, '2020-12-01 17:39:06', '2020-12-01 17:39:06'),
-(3, 13, 'bhaktapur', 'Nepal', 'bhaktapur', '44500', '987563241', 0, '2022-07-21 05:00:12', '2022-07-21 05:00:12'),
-(4, 14, 'sddsfsdfdsf', 'Nepal', 'bhaktapur', '44500', '123456789', 0, '2022-07-21 05:33:28', '2022-07-21 05:33:28');
+(2, 9, 'new road', 'Nepal', 'kathmandu', '977', '7410852', 0, '2020-12-01 17:39:06', '2020-12-01 17:39:06');
 
 -- --------------------------------------------------------
 
@@ -261,9 +259,7 @@ INSERT INTO `business_settings` (`id`, `type`, `value`, `created_at`, `updated_a
 (59, 'shipping_cost_admin', '0', '2020-07-01 13:49:56', '2020-07-01 13:49:56'),
 (60, 'payhere_sandbox', '0', '2020-07-30 18:23:53', '2020-07-30 18:23:53'),
 (61, 'payhere', '0', '2020-07-30 18:23:53', '2020-07-30 18:23:53'),
-(62, 'google_recaptcha', '0', '2020-08-17 07:13:37', '2020-08-17 07:13:37'),
-(63, 'connectips_payment', '0', '2022-07-21 05:32:12', '2022-07-21 05:32:12'),
-(64, 'nibl_payment', '0', '2022-07-21 05:32:29', '2022-07-21 05:32:29');
+(62, 'google_recaptcha', '0', '2020-08-17 07:13:37', '2020-08-17 07:13:37');
 
 -- --------------------------------------------------------
 
@@ -917,9 +913,7 @@ CREATE TABLE `customers` (
 
 INSERT INTO `customers` (`id`, `user_id`, `created_at`, `updated_at`) VALUES
 (4, 8, '2019-08-01 10:35:09', '2019-08-01 10:35:09'),
-(5, 11, '2020-11-30 22:21:24', '2020-11-30 22:21:24'),
-(6, 13, '2022-07-21 04:59:27', '2022-07-21 04:59:27'),
-(7, 14, '2022-07-21 05:28:54', '2022-07-21 05:28:54');
+(5, 11, '2020-11-30 22:21:24', '2020-11-30 22:21:24');
 
 -- --------------------------------------------------------
 
@@ -1327,8 +1321,7 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `user_id`, `guest_id`, `shipping_address`, `payment_type`, `payment_status`, `payment_details`, `grand_total`, `coupon_discount`, `code`, `date`, `viewed`, `delivery_viewed`, `payment_status_viewed`, `commission_calculated`, `created_at`, `updated_at`) VALUES
 (1, 11, NULL, '{\"name\":\"Deepak Kumar Karna\",\"email\":\"karna.deepak@gmail.com\",\"address\":\"PCPS College, Nepal Kandevta Sthan, Kupondole\",\"country\":\"Nepal\",\"city\":\"Kathmandu\",\"postal_code\":\"46600\",\"phone\":\"+9779841209394\",\"checkout_type\":\"logged\"}', 'cash_on_delivery', 'unpaid', NULL, 912.00, 0.00, '20201130-17232537', 1606736305, 1, 0, 0, 0, '2020-11-30 22:23:25', '2020-12-01 17:40:17'),
-(2, 9, NULL, '{\"name\":\"kgxpress\",\"email\":\"admin@kgxpress.com\",\"address\":\"new road\",\"country\":\"Nepal\",\"city\":\"kathmandu\",\"postal_code\":\"977\",\"phone\":\"7410852\",\"checkout_type\":\"logged\"}', 'cash_on_delivery', 'unpaid', NULL, 3355.00, 0.00, '20201201-12393912', 1606805679, 1, 0, 0, 0, '2020-12-01 17:39:39', '2020-12-01 17:40:36'),
-(3, 14, NULL, '{\"name\":\"admin\",\"email\":\"admin123@gmail.com\",\"address\":\"sddsfsdfdsf\",\"country\":\"Nepal\",\"city\":\"bhaktapur\",\"postal_code\":\"44500\",\"phone\":\"123456789\",\"checkout_type\":\"logged\"}', 'cash_on_delivery', 'unpaid', NULL, 96.00, 0.00, '20220721-11184386', 1658381623, 0, 0, 0, 0, '2022-07-21 05:33:43', '2022-07-21 05:33:44');
+(2, 9, NULL, '{\"name\":\"kgxpress\",\"email\":\"admin@kgxpress.com\",\"address\":\"new road\",\"country\":\"Nepal\",\"city\":\"kathmandu\",\"postal_code\":\"977\",\"phone\":\"7410852\",\"checkout_type\":\"logged\"}', 'cash_on_delivery', 'unpaid', NULL, 3355.00, 0.00, '20201201-12393912', 1606805679, 1, 0, 0, 0, '2020-12-01 17:39:39', '2020-12-01 17:40:36');
 
 -- --------------------------------------------------------
 
@@ -1361,8 +1354,7 @@ CREATE TABLE `order_details` (
 
 INSERT INTO `order_details` (`id`, `order_id`, `seller_id`, `product_id`, `variation`, `price`, `tax`, `shipping_cost`, `quantity`, `payment_status`, `delivery_status`, `shipping_type`, `pickup_point_id`, `product_referral_code`, `created_at`, `updated_at`) VALUES
 (1, 1, 9, 10, '', 912.00, 0.00, 0.00, 6, 'unpaid', 'pending', 'home_delivery', NULL, NULL, '2020-11-30 22:23:25', '2020-11-30 22:23:25'),
-(2, 2, 9, 55, '', 3355.00, 0.00, 0.00, 1, 'unpaid', 'pending', 'home_delivery', NULL, NULL, '2020-12-01 17:39:39', '2020-12-01 17:39:39'),
-(3, 3, 9, 15, '', 96.00, 0.00, 0.00, 1, 'unpaid', 'pending', 'home_delivery', NULL, NULL, '2022-07-21 05:33:44', '2022-07-21 05:33:44');
+(2, 2, 9, 55, '', 3355.00, 0.00, 0.00, 1, 'unpaid', 'pending', 'home_delivery', NULL, NULL, '2020-12-01 17:39:39', '2020-12-01 17:39:39');
 
 -- --------------------------------------------------------
 
@@ -1515,7 +1507,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `added_by`, `user_id`, `category_id`, `subcategory_id`, `subsubcategory_id`, `brand_id`, `photos`, `thumbnail_img`, `video_provider`, `video_link`, `tags`, `description`, `unit_price`, `purchase_price`, `variant_product`, `attributes`, `choice_options`, `colors`, `variations`, `todays_deal`, `published`, `featured`, `current_stock`, `unit`, `min_qty`, `discount`, `discount_type`, `tax`, `tax_type`, `shipping_type`, `shipping_cost`, `num_of_sale`, `meta_title`, `meta_description`, `meta_img`, `pdf`, `slug`, `rating`, `barcode`, `digital`, `file_name`, `file_path`, `created_at`, `updated_at`) VALUES
-(15, 'Streax Cream Hair Color 7.3 Golden Blonde, 20 gm', 'admin', 9, 10, 13, NULL, 1, '[\"uploads\\/products\\/photos\\/JA20QCjjNRks02L7SUFw1TmwsfzXYngCAPa7iYrl.jpeg\"]', 'uploads/products/thumbnail/dMK98ocnLZKTiNTEjSBWcGXi8t2YnoRBAc6wq066.jpeg', 'youtube', NULL, 'streax,health,beauty,hair', NULL, 96.00, 96.00, 0, '[]', '[]', '[]', NULL, 0, 1, 0, 14, 'Pc.', 1, 0.00, 'amount', 0.00, 'amount', 'flat_rate', 0.00, 1, 'Streax Cream Hair Color 7.3 Golden Blonde, 20 gm', NULL, 'uploads/products/thumbnail/dMK98ocnLZKTiNTEjSBWcGXi8t2YnoRBAc6wq066.jpeg', NULL, 'Streax-Cream-Hair-Color-73-Golden-Blonde-20-gm-hxL5V', 0.00, NULL, 0, NULL, NULL, '2020-11-30 21:08:05', '2022-07-21 05:33:44'),
+(15, 'Streax Cream Hair Color 7.3 Golden Blonde, 20 gm', 'admin', 9, 10, 13, NULL, 1, '[\"uploads\\/products\\/photos\\/JA20QCjjNRks02L7SUFw1TmwsfzXYngCAPa7iYrl.jpeg\"]', 'uploads/products/thumbnail/dMK98ocnLZKTiNTEjSBWcGXi8t2YnoRBAc6wq066.jpeg', 'youtube', NULL, 'streax,health,beauty,hair', NULL, 96.00, 96.00, 0, '[]', '[]', '[]', NULL, 0, 1, 0, 15, 'Pc.', 1, 0.00, 'amount', 0.00, 'amount', 'flat_rate', 0.00, 0, 'Streax Cream Hair Color 7.3 Golden Blonde, 20 gm', NULL, 'uploads/products/thumbnail/dMK98ocnLZKTiNTEjSBWcGXi8t2YnoRBAc6wq066.jpeg', NULL, 'Streax-Cream-Hair-Color-73-Golden-Blonde-20-gm-hxL5V', 0.00, NULL, 0, NULL, NULL, '2020-11-30 21:08:05', '2020-11-30 21:08:05'),
 (16, 'Super Vasmol Kesh Kala, 50 ml', 'admin', 9, 10, 13, NULL, 1, '[\"uploads\\/products\\/photos\\/YF0c6mta5QitSWgJM5lHxqzzTmr2d5yJQFOfzhOh.jpeg\"]', 'uploads/products/thumbnail/U7MHAx0xrhsKCruu7OXJrulABAWzg3OTYixIZ2o7.jpeg', 'youtube', NULL, 'hair,super,vasmol,streax', NULL, 55.00, 55.00, 0, '[]', '[]', '[]', NULL, 0, 1, 0, 14, 'Pc.', 1, 0.00, 'amount', 0.00, 'amount', 'flat_rate', 0.00, 0, 'Super Vasmol Kesh Kala, 50 ml', NULL, 'uploads/products/thumbnail/U7MHAx0xrhsKCruu7OXJrulABAWzg3OTYixIZ2o7.jpeg', NULL, 'Super-Vasmol-Kesh-Kala-50-ml-4ON6a', 0.00, NULL, 0, NULL, NULL, '2020-11-30 21:10:43', '2020-11-30 21:10:43'),
 (17, 'Streax Insta Shampoo Hair Color  3.16 Burgundy, 15ml', 'admin', 9, 10, 13, NULL, 1, '[\"uploads\\/products\\/photos\\/oaWTYBIxZy0WcZpmVbdK9GU0wKUtM5Vnl21d6fzN.jpeg\"]', 'uploads/products/thumbnail/QqqWVi6AkNYGxMPv5zga1wDKTSxPIsrbPqgX7fXa.jpeg', 'youtube', NULL, 'streax,health,hair', NULL, 32.00, 32.00, 0, '[]', '[]', '[]', NULL, 0, 1, 0, 28, 'Pc.', 1, 0.00, 'amount', 0.00, 'amount', 'flat_rate', 0.00, 0, 'Streax Insta Shampoo Hair Color  3.16 Burgundy, 15ml', NULL, 'uploads/products/thumbnail/QqqWVi6AkNYGxMPv5zga1wDKTSxPIsrbPqgX7fXa.jpeg', NULL, 'Streax-Insta-Shampoo-Hair-Color--316-Burgundy-15ml-mH589', 0.00, NULL, 0, NULL, NULL, '2020-11-30 21:13:28', '2020-11-30 21:13:28'),
 (18, 'Streax Hair Serum Colour Lock, 100 gm', 'admin', 9, 10, 13, NULL, 1, '[\"uploads\\/products\\/photos\\/B3VNtCgYIpPpavoJPrKAlhnRL1K3ONapPgcJkxvK.jpeg\"]', 'uploads/products/thumbnail/Ar3owPurMfg7Up65AalUF7qdTZdGJBtzuxzZvIIV.jpeg', 'youtube', NULL, 'streax,hair,health', NULL, 440.00, 440.00, 0, '[]', '[]', '[]', NULL, 0, 1, 0, 35, 'Pc.', 1, 0.00, 'amount', 0.00, 'amount', 'flat_rate', 0.00, 0, 'Streax Hair Serum Colour Lock, 100 gm', NULL, 'uploads/products/thumbnail/Ar3owPurMfg7Up65AalUF7qdTZdGJBtzuxzZvIIV.jpeg', NULL, 'Streax-Hair-Serum-Colour-Lock-100-gm-XLGWu', 0.00, NULL, 0, NULL, NULL, '2020-11-30 21:17:32', '2020-11-30 21:17:32'),
@@ -1939,10 +1931,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `referred_by`, `provider_id`, `user_type`, `name`, `email`, `email_verified_at`, `verification_code`, `new_email_verificiation_code`, `password`, `remember_token`, `avatar`, `avatar_original`, `address`, `country`, `city`, `postal_code`, `phone`, `balance`, `banned`, `referral_code`, `customer_package_id`, `remaining_uploads`, `created_at`, `updated_at`) VALUES
 (3, NULL, NULL, 'seller', 'Mr. Seller', 'seller@example.com', '2018-12-11 18:00:00', NULL, NULL, '$2y$10$eUKRlkmm2TAug75cfGQ4i.WoUbcJ2uVPqUlVkox.cv4CCyGEIMQEm', 'MFa8WtQi2hsMwM6X8vlaY8vvQvhzVQoxkAZhcbwidKBMEnNJeH78oXNdlgYP', 'https://lh3.googleusercontent.com/-7OnRtLyua5Q/AAAAAAAAAAI/AAAAAAAADRk/VqWKMl4f8CI/photo.jpg?sz=50', 'uploads/ucQhvfz4EQXNeTbN8Eif0Cpq5LnOwvg8t7qKNKVs.jpeg', 'Demo address', 'US', 'Demo city', '1234', NULL, 0.00, 0, '3dLUoHsR1l', NULL, NULL, '2018-10-07 04:42:57', '2020-03-05 01:33:22'),
 (8, NULL, NULL, 'customer', 'Mr. Customer', 'customer@example.com', '2018-12-11 18:00:00', NULL, NULL, '$2y$10$eUKRlkmm2TAug75cfGQ4i.WoUbcJ2uVPqUlVkox.cv4CCyGEIMQEm', '9ndcz5o7xgnuxctJIbvUQcP41QKmgnWCc7JDSnWdHOvipOP2AijpamCNafEe', 'https://lh3.googleusercontent.com/-7OnRtLyua5Q/AAAAAAAAAAI/AAAAAAAADRk/VqWKMl4f8CI/photo.jpg?sz=50', 'uploads/ucQhvfz4EQXNeTbN8Eif0Cpq5LnOwvg8t7qKNKVs.jpeg', 'Demo address', 'US', 'Demo city', '1234', NULL, 0.00, 0, '8zJTyXTlTT', NULL, NULL, '2018-10-07 04:42:57', '2020-03-03 04:26:11'),
-(9, NULL, NULL, 'admin', 'kgxpress', 'superadmin@admin.com', '2020-11-23 20:11:02', NULL, NULL, '$2a$12$iZcbb5YIqZPnQUXE0cBcy.XqCi707fiMX32Kpmd5eyjO298YW9BtO\n', 'hjJ8wFZNLxS8Q1N4LiHSiDb3CC2PYhdFjDW5U9C0Oq7JbueQGK7cu5t8CvNJ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2020-11-23 20:08:02', '2020-11-30 19:18:18'),
-(11, NULL, NULL, 'customer', 'Deepak Kumar Karna', 'karna.deepak@gmail.com', '2020-11-30 22:11:24', NULL, NULL, '$2y$10$0Vowh5PN9EPWf/YpaGpvjuBU3SxovhLqg9ULiN6iXGeD4jvds9HBK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2020-11-30 22:21:23', '2020-11-30 22:21:24'),
-(13, NULL, NULL, 'admin', 'admin', 'admin@12.com', NULL, NULL, NULL, '$2y$10$CWP2I7hE5A8hl/2T89N8SODUhFPzziq7hqrOGR4Cskl6Bc6szAd3W', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2022-07-21 04:59:27', '2022-07-21 04:59:27'),
-(14, NULL, NULL, 'admin', 'admin', 'admin123@gmail.com', NULL, NULL, NULL, '$2y$10$4FIa6J6F7lJ0GNKMcPYw7.DqfvUNKGTcNe6WUpl9pFGSkQiONmNUa', 'admin123', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2022-07-21 05:28:53', '2022-07-21 05:28:53');
+(9, NULL, NULL, 'admin', 'kgxpress', 'admin@kgxpress.com', '2020-11-23 20:11:02', NULL, NULL, '$2y$10$dO8jJGvJu/eEKyvR/7Q5eeD7MS0Y1e.BPLwZT5Nq4l0pN9O/Vx3FC', 'hjJ8wFZNLxS8Q1N4LiHSiDb3CC2PYhdFjDW5U9C0Oq7JbueQGK7cu5t8CvNJ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2020-11-23 20:08:02', '2020-11-30 19:18:18'),
+(11, NULL, NULL, 'customer', 'Deepak Kumar Karna', 'karna.deepak@gmail.com', '2020-11-30 22:11:24', NULL, NULL, '$2y$10$0Vowh5PN9EPWf/YpaGpvjuBU3SxovhLqg9ULiN6iXGeD4jvds9HBK', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2020-11-30 22:21:23', '2020-11-30 22:21:24');
 
 -- --------------------------------------------------------
 
@@ -2348,7 +2338,7 @@ ALTER TABLE `addons`
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `app_settings`
@@ -2378,7 +2368,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `business_settings`
 --
 ALTER TABLE `business_settings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `carts`
@@ -2432,7 +2422,7 @@ ALTER TABLE `currencies`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `customer_packages`
@@ -2516,13 +2506,13 @@ ALTER TABLE `oauth_personal_access_clients`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -2648,7 +2638,7 @@ ALTER TABLE `ticket_replies`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `wallets`
