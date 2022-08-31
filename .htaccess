@@ -1,9 +1,9 @@
 text/x-generic .htaccess ( ASCII text )
  RewriteEngine On
-#   RewriteCond %{HTTP_HOST} ^(www\.)?kgxpress.kedarnathsaccos.com.np$
+#   RewriteCond %{HTTP_HOST} ^(www\.)?ekart.sushantachamo.com.np$
 #   RewriteCond %{REQUEST_URI} !(/|\.[^/]*)$
-#   RewriteRule (.*) http://www.kgxpress.kedarnathsaccos.com.np/$1/ [L,R=301]
-   RewriteCond %{HTTP_HOST} ^(www\.)?kgxpress.kedarnathsaccos.com.np$
+#   RewriteRule (.*) http://www.ekart.sushantachamo.com.np/$1/ [L,R=301]
+   RewriteCond %{HTTP_HOST} ^(www\.)?ekart.sushantachamo.com.np$
    RewriteCond %{REQUEST_URI} !^/public/
    RewriteRule ^(.*)$ /public/$1
 
