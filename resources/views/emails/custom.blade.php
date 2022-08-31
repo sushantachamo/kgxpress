@@ -231,7 +231,7 @@ application/x-httpd-php newsletter.blade.php ( PHP script text )
                             </tr>
                             <tr>
                                 <td style="padding: 0px 40px 10px 40px; font-family: sans-serif; font-size: 12px; line-height: 18px; color: #666666; text-align: center; font-weight:normal;">
-                                    <p style="margin: 0;">This email was sent to you from noreply@kgxpress.com</p>
+                                    <p style="margin: 0;">This email was sent to you from {{ env('MAIL_FROM_ADDRESS') }}</p>
                                 </td>
                             </tr>
                             <tr>
