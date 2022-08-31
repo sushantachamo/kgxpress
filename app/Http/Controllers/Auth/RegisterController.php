@@ -147,7 +147,7 @@ class RegisterController extends Controller
                 Mail::send('emails.registration', $data, function($message) use ($to_name, $to_email, $subject) {
                     $message->to($to_email, $to_name)
                             ->subject($subject);
-                    $message->from('noreply@kgxpress.com',config('app.name'));
+                    $message->from(env('MAIL_FROM_ADDRESS'),config('app.name'));
                 });
                        
                 flash(translate('Registration successfull.'))->success();
