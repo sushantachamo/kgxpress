@@ -1,45 +1,6 @@
-text/x-generic .htaccess ( ASCII text )
- RewriteEngine On
-#   RewriteCond %{HTTP_HOST} ^(www\.)?ekart.sushantachamo.com.np$
-#   RewriteCond %{REQUEST_URI} !(/|\.[^/]*)$
-#   RewriteRule (.*) http://www.ekart.sushantachamo.com.np/$1/ [L,R=301]
-   RewriteCond %{HTTP_HOST} ^(www\.)?ekart.sushantachamo.com.np$
-   RewriteCond %{REQUEST_URI} !^/public/
-   RewriteRule ^(.*)$ /public/$1
-
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
-
-    RewriteEngine On
-
-    # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
-    # Redirect Trailing Slashes If Not A Folder...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
-    
-    RewriteRule ^uploads(/|$) /public%{REQUEST_URI} [L,NC,R=301,NE]
-    RewriteRule ^frontend(/|$) /public%{REQUEST_URI} [L,NC,R=301,NE]
-    RewriteRule ^css(/|$) /public%{REQUEST_URI} [L,NC,R=301,NE]
-    RewriteRule ^js(/|$) /public%{REQUEST_URI} [L,NC,R=301,NE]
-    RewriteRule ^plugins(/|$) /public%{REQUEST_URI} [L,NC,R=301,NE]
-
-    # Handle Front Controller...
-    RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ public/index.php [L]
+     RewriteEngine On
+     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
 
-# Disable index view
-Options -Indexes
 
-# Hide a specific file
-<Files .env>
-    Order allow,deny
-    Deny from all
-</Files>
