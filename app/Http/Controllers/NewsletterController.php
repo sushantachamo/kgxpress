@@ -33,7 +33,7 @@ class NewsletterController extends Controller
                         Mail::send('emails.custom', $data, function($message) use ($to_email, $subject) {
                             $message->to($to_email)
                                     ->subject($subject);
-                            $message->from('{{ env('MAIL_FROM_ADDRESS') }}',config('app.name'));
+                            $message->from('noreply@kgxpress.com',config('app.name'));
                         });
                         
                     }
@@ -74,7 +74,7 @@ class NewsletterController extends Controller
                         Mail::send('emails.custom', $data, function($message) use ($to_email, $subject) {
                             $message->to($to_email)
                                     ->subject($subject);
-                            $message->from('{{ env('MAIL_FROM_ADDRESS') }}',config('app.name'));
+                            $message->from('noreply@kgxpress.com',config('app.name'));
                         });
                         
                     }

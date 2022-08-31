@@ -53,7 +53,7 @@ class SubscriberController extends Controller
                 Mail::send('emails.newsletter', $data, function($message) use ($to_name, $to_email, $subject) {
                     $message->to($to_email, $to_name)
                             ->subject($subject);
-                    $message->from('{{ env('MAIL_FROM_ADDRESS') }}',config('app.name'));
+                    $message->from('noreply@kgxpress.com',config('app.name'));
                 });
                 // throw new Exception('There seems to be a problem. Please try again in a while');
                 flash(translate('You have subscribed successfully'))->success();
